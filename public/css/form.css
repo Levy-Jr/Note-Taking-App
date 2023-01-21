@@ -70,7 +70,8 @@ picture {
 
 body {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: var(--light-color);
     color: var(--black-color);
     font-family: var(--font-family);

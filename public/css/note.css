@@ -82,11 +82,12 @@ select {
 }
 
 body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: var(--background-color);
     color: var(--color-text);
     font-family: var(--font-family);
-    display: flex;
-    justify-content: center;
     padding: 2.5rem;
 }
 
