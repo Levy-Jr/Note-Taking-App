@@ -1,0 +1,24 @@
+{{>partials/noteHeader}}
+
+<main class="main text-align">
+    {{#note}}
+    <h1 class="text-center">{{noteTitle}}</h1>
+    
+        <article class="note">
+            <p class="mainText">{{noteText}}</p>
+        </article>
+    
+    <div class="actions">
+        <form method="get" action="/notes/{{id}}/editForm" class="edit">
+            <input type="submit" class="buttonEdit" value="Editar">
+        </form>
+        <form method="get" action="/notes/{{id}}/delete" class="delete">
+            <input type="submit" class="buttonDelete" value="Excluir">
+        </form>
+    </div>
+    
+    {{/note}}
+
+</main>
+
+{{>partials/footer}}

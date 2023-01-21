@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+  --light-color: #F5F5F5;
+  --dark-color: #000;
+  --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-family: var(--font-family);
+    padding-top: 3.5rem;
+}
+
+.main {
+    width: min(100%, 68.75rem);
+}
+
+.noteTitle {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.note-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.note {
+    width: min(100%, 15rem);
+    background-color: var(--light-color);
+    border-radius: .1rem;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, .2);
+    color: var(--dark-color);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.notePreview{
+  font-size: .875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-block: .75rem;
+}
+
+.action-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    border: 0;
+    background: transparent;
+}
+
+/* .note::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00ff00;
+} */
+
+.text-center > .button {
+    display: inline-block;
+    background-color: orange;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+}
+
+.text-center > .button:hover{
+    box-shadow: inset 210px 0 0 rgb(124, 80, 0);
+}
+
+.text-center > .button > a {
+    display: block;
+    color: var(--dark-color);
+    font-weight: 600;
+    padding: .25em 1.25em;
+    text-decoration: none;
+}
+
+.noteAction{
+  text-decoration: none;
+}
+
+.noteAction:hover {
+  text-decoration: underline;
+}
+
+.noteAction.open {
+  color: #0000ff;
+}
+
+.noteAction.delete {
+  color: #ff0000;
+}
+
+/* .note:hover {
+    cur
+} */
+
+/* utility classes */
+
+.text-center {
+    text-align: center;
+}
+
+.noNotes {
+  margin: 4rem auto 3rem;
+  color: #ff0000;
+}

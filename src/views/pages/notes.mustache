@@ -1,0 +1,39 @@
+{{>partials/notesHeader}}
+
+<main class="main">
+    <h1 class="text-center">Sua lista de anotações:</h1>
+    <section class="note-section">
+    {{#allNotes}}
+        <article class="note">
+            <div class="title-container">
+                <h2 class="noteTitle">{{noteTitle}}</h2>
+            </div>
+            <div class="noteText">
+                <p class="notePreview">{{noteText}}</p>
+            </div>
+            <div class="action-container">
+                <button class="button">
+                    <a class="noteAction open" href="/notes/{{id}}">Ver</a>
+                </button>
+                <button class="button">
+                    <a class="noteAction open" href="/notes/{{id}}/editForm">Editar</a>
+                </button>
+                <button class="button">
+                    <a class="noteAction delete" href="/notes/{{id}}/delete">Excluir</a>
+                </button>
+            </div>
+        </article>
+    {{/allNotes}}
+
+    {{^allNotes}}
+        <h2 class="noNotes text-center">Você ainda não tem nenhuma anotação.</h2>
+    {{/allNotes}}
+
+    </section>
+
+    <div class="text-center">
+        <button class="button"><a href="/notes/new">Adicionar Anotação</a></button>
+    </div>
+</main>
+
+{{>partials/footer}}

@@ -1,0 +1,29 @@
+{{>partials/formHeader}}
+
+{{#note}}
+<main>
+
+    <h1>Edição da anotação sobre "{{noteTitle}}"</h1>
+
+    <form class="form" method="post" action="/notes/{{id}}/editForm/edit">
+        <div class="relative">
+            <input type="hidden" name="id" value="{{id}}">
+            <input type="text" name="noteTitle" id="tituloAnotacao" class="input"
+            placeholder="Titulo" value="{{noteTitle}}" autofocus required>
+            <label for="tituloAnotacao" class="form-label">Título</label>
+        </div>
+
+        <div class="relative">
+            <textarea spellcheck="false" name="noteText" id="Anotacao" cols="80" rows="10" class="input">{{noteText}}</textarea>
+            <label for="Anotacao" class="form-label">Anotação</label>
+        </div>
+
+        <div class="buttons">
+            <input class="button" type="submit" value="Editar Anotação">
+            <button class="button red"><a href="/notes/{{id}}">Cancelar</a></button>
+        </div>
+    </form>
+</main>
+{{/note}}
+
+{{>partials/footer}}

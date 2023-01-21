@@ -1,0 +1,26 @@
+{{>partials/formHeader}}
+<main>
+
+    <h1>Nova Lista de Anotações</h1>
+
+    <form class="form" method="post" action="/notes/new">
+        <div class="relative">
+            <input type="text" name="noteTitle" id="tituloAnotacao" class="input"
+            placeholder="Titulo" autofocus required>
+            <label for="tituloAnotacao" class="form-label">Título</label>
+        </div>
+
+        <div class="relative">
+            <textarea spellcheck="false" cols="100" rows="15" name="noteText" id="Anotacao" class="input"
+            placeholder="Anotação" autofocus required></textarea>
+            <label for="Anotacao" class="form-label">Anotação</label>
+        </div>
+
+        <div class="buttons">
+            <input class="button" type="submit" value="Listar Anotação">
+            <button class="button red"><a href="/notes">Cancelar</a></button>
+        </div>
+    </form>
+</main>
+
+{{>partials/footer}}
